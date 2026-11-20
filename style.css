@@ -1,4 +1,3 @@
-/* --- GLOBAL & VARIABLES --- */
 html {
     scroll-behavior: smooth; 
     overflow-x: hidden;
@@ -19,7 +18,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- LIQUID GLASS HEADER --- */
 .glass-header {
     position: fixed;
     top: 20px;
@@ -114,13 +112,13 @@ body {
     cursor: pointer;
 }
 
+/* Had to be added for display fixes*/
 .desktop-only { display: flex; }
 .mobile-only { display: none; }
 
-/* --- HERO SECTION --- */
 .hero {
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,12 +126,17 @@ body {
     text-align: center;
 }
 
+
 .hero h1 {
     font-size: 4rem;
 }
 
 .hero span {
-    color: #767474;
+    color: #696565;
+}
+
+Body.light-mode .hero span {
+    color: #5b5959;
 }
 
 .hero p {
@@ -151,9 +154,9 @@ body {
     cursor: pointer; /* Makes it clear it's clickable */
 }
 
-/* --- GENERAL SECTIONS --- */
 .section {
-    padding: 80px 10%;
+    margin-top: -30px;
+    padding: 100px 10%;
     min-height: auto;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -164,11 +167,23 @@ body {
     text-align: center;
 }
 
+.fix{
+    margin-top: -50px;
+    color: #979090;
+}
+
+Body.light-mode .fix{
+    color: #444444;
+}
+
 .about-content p {
     font-size: 1.2rem;
+    padding-top: -220px;
+    padding: 0 20px;
     line-height: 1.8;
-    margin-bottom: 20px;
-    color: #cccccc;
+    margin-bottom: 60px;
+    Margin-top: -40px;
+    color: #fffefe;
     text-align: center;
     max-width: 800px;
     margin-inline: auto;
@@ -229,8 +244,8 @@ body {
     align-items: center;
     gap: 10px;
     width: fit-content;
-    background: #434242;
-    color: #ffffff; /* FIXED: Made text white for contrast */
+    background: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 35px;
@@ -327,9 +342,8 @@ body.light-mode .skill-card h3 {
 }
 body.light-mode .skill-card li,
 body.light-mode .project-card p,
-body.light-mode .hero span,
 body.light-mode .about-content p {
-    color: #444444;
+    color: #000000;
 }
 
 body.light-mode .icon-btn {
@@ -348,7 +362,7 @@ body.light-mode .tech-tags span {
 }
 
 body.light-mode .project-btn {
-    background: #333333;
+    background: #000000;
     color: #ffffff;
 }
 body.light-mode .project-btn:hover {
@@ -462,4 +476,9 @@ body.light-mode .contact-card:hover {
     padding: 20px 0;
     background-color: #050505; 
     color: #ffffff;
+}
+
+Body.light-mode .bottom{
+    background-color: #f4f4f4; 
+    color: #000000;
 }
