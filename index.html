@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JayyTee's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="logo">
+            <span>JayyTee</span> 
+        </div>
+        
+        <nav class="nav-links" id="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="theme-toggle" class="icon-btn">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <a href="#contact" class="cta-btn desktop-only">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="hamburger mobile-only" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    
+    <section class="hero" id="home">
+        <img src="./Assets/JayyTee.jpeg" alt="Francis" class="hero-img">
+        <h1>Hello, I'm <span>Francis</span></h1>
+        <p>Web Developer | AI Engineer | Systems Architect</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>
+                I am a builder and Co-founder at <strong>The Marketing Haven</strong>. My focus is on creating automated, secure, and intelligent digital systems. 
+                I bridge the gap between frontend design and complex backend systems architecture.
+            </p>
+            <p>
+                I Finished my Frontend training at <strong>NITHUB</strong>, Then i further went on to specialize in AI Engineering and Systems Architecture. 
+                I have experience building automated systems, managing edge functions, and implementing secure and multi layer systems structures.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>Frontend Engineering</li>
+                    <li>HTML & CSS</li>
+                    <li>React & Vite</li>
+                    <li>Tailwind CSS & Framer Motion</li>
+                    <li>CSS Glassmorphism</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Backend & AI</h3>
+                <ul>
+                    <li>Supabase & PostgreSQL</li>
+                    <li>Edge Functions & SQL</li>
+                    <li>Ai Assisted Development</li>
+                    <li>LLM Integration (Gemini, Groq)</li>
+                    <li>RAG Systems & Prompt Engineering</li>
+                    <li>API Integration & Orchestration</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Architecture</h3>
+                <ul>
+                    <li>System Design & Routing</li>
+                    <li>Complex Prompt Architecture</li>
+                    <li>IP-based Rate Limiting</li>
+                    <li>RLS (Row Level Security)</li>
+                    <li>JWT & Secure Authentication</li>
+                    <li>CI/CD Deployment</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div id="projects-container" class="projects-grid"></div>
+    </section>
+
+       <section id="contact" class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:folushofadeyi01@gmail.com" class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email Me</span>
+            </a>
+            <a href="https://www.linkedin.com/in/francis-fadeyi-301040249?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://wa.me/2347026110104" target="_blank" class="contact-card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img src="./Assets/JayyTee.jpeg" alt="Francis Full" class="modal-content">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
