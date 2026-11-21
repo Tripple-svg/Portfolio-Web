@@ -1,7 +1,36 @@
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const textElement = document.querySelector(".scramble-text");
+const preloader = document.querySelector(".preloader");
+
+let iterations = 0;
+
+const interval = setInterval(() => {
+    // It changes the text to random letters
+    textElement.innerText = textElement.innerText
+        .split("")
+        .map((letter, index) => {
+            if(index < iterations) {
+                return "JayyTee"[index];    
+            }
+            return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+
+    if(iterations >= "JayyTee".length) {
+        clearInterval(interval);
+        // To remove the preloader after the animation is done
+        setTimeout(() => {
+            preloader.classList.add("fade-out");
+        }, 500);
+    }
+    
+    iterations += 1 / 3;
+}, 50);
+
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Saved Theme for users
+// So that the theme persists even after page reload
 if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light-mode');
     themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
@@ -19,7 +48,6 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// --- 2. MOBILE HAMBURGER MENU ---
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
