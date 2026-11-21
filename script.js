@@ -5,7 +5,7 @@ const preloader = document.querySelector(".preloader");
 let iterations = 0;
 
 const interval = setInterval(() => {
-    // It changes the text to random letters
+    // Changes the text to random letters
     textElement.innerText = textElement.innerText
         .split("")
         .map((letter, index) => {
@@ -30,7 +30,7 @@ const interval = setInterval(() => {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// So that the theme persists even after page reload
+// So that the theme persists even after page reloads
 if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light-mode');
     themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
@@ -55,14 +55,13 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
     });
 });
 
-// --- 3. PROJECTS DATA & RENDERING ---
+//Projects Section
 const projects = [
     {
         title: "Haven AI & The Marketing Haven",
@@ -92,22 +91,19 @@ const renderProjects = () => {
 
 renderProjects();
 
-// --- 4. IMAGE LIGHTBOX ---
+// For the popup image 
 const heroImg = document.querySelector('.hero-img');
 const modal = document.getElementById('image-modal');
 const closeModal = document.querySelector('.close-modal');
 
-// When image is clicked, show modal
 heroImg.addEventListener('click', () => {
     modal.style.display = 'flex';
 });
 
-// When X is clicked, hide modal
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// When clicking anywhere on the background, hide modal
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.style.display = 'none';
