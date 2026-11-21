@@ -117,7 +117,7 @@ body {
 .mobile-only { display: none; }
 
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     padding-top: 120px;
     display: flex;
     flex-direction: column;
@@ -151,12 +151,12 @@ Body.light-mode .hero span {
     object-fit: cover; 
     margin-bottom: 20px; 
     object-position: center 25%;
-    cursor: pointer; /* Makes it clear it's clickable */
+    cursor: pointer;
 }
 
 .section {
     margin-top: -30px;
-    padding: 100px 10%;
+    padding: 70px 10%;
     min-height: auto;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -168,7 +168,8 @@ Body.light-mode .hero span {
 }
 
 .fix{
-    margin-top: -50px;
+    margin-top: -40px;
+    padding-bottom: 20px;
     color: #979090;
 }
 
@@ -178,11 +179,11 @@ Body.light-mode .fix{
 
 .about-content p {
     font-size: 1.2rem;
-    padding-top: -220px;
+    padding-top: -50px;
     padding: 0 20px;
     line-height: 1.8;
-    margin-bottom: 60px;
-    Margin-top: -40px;
+    margin-bottom: 100px;
+    Margin-top: -80px;
     color: #fffefe;
     text-align: center;
     max-width: 800px;
